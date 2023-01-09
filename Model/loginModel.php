@@ -1,5 +1,7 @@
 <?php
 
+require_once("../config/config.php");
+
 class App extends Conectar {
 
     public function get_user($user, $contrasenia){
