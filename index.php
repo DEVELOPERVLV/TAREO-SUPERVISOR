@@ -1,10 +1,4 @@
-<?php
-    require_once("config/conexion.php"); 
 
-    require_once("models/App.php");
-    $app = new App();
-    $appx = $app->get_app();
-?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -22,71 +16,15 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="public\css\style.css" type="text/css">
     </head>
+
+    <?php
+        header("Location: View/loginView.php");    
+    ?>
+
     <body>
 
-        <img src="public\img\background-1.jpeg" class="background" alt="">
 
-        <div class="header">
-            <h1>
-                <a data-scroll="scrollto" href="#start">
-                    <img src="public\img\headerlogo.png" height="32" width="35" class="header-logo" alt="">
-                    App's
-                </a>
-            </h1>
-        </div>
-
-        <section id="content">
-            <section class="clearfix section" id="start">
-                <?php
-                    for($i=0; $i<sizeof($appx);$i++){
-                ?>
-                    <div class="tile <?php echo $appx[$i]["APP_COLOR"];?> webdesign imagetile icon-fadein w2 h1" onClick="ver(<?php echo $appx[$i]["APP_ID"];?>);">
-                        <a href="#" data-lightbox="mlightboximage" class="link" data-src="public/img/<?php echo $appx[$i]["APP_IMG"];?>" data-title="Generic" data-description="">
-                            <i class="fa fa-laptop"></i>
-                            <img src="public\img\<?php echo $appx[$i]["APP_IMG"];?>" alt="">
-                            <p class="title"><?php echo $appx[$i]["APP_NOM_CORT"];?></p>
-                        </a>
-                    </div>
-                <?php
-                    }
-                ?>
-
-            </section>
-
-        </section> 
-
-        <section class="mlightbox" id="lockscreen">
-            <div id="lockscreen-content">
-                <img src="public\img\logo.png" height="109" width="140" id="locklogo" alt="Metromega">
-                <br><br>
-                <img src="public\img\preloader.gif" id="lockloader" alt="Loading..">
-            </div>
-        </section>
-
-        <section class="mlightbox" id="loader">
-            <a href="#">
-                <img src="public\img\preloader.gif" alt="Loading..">
-            </a>
-        </section>
-
-        <div id="modalver" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="idtitulo"></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body" id="iddetalle">
-                        
-                    </div>
-                    <div class="modal-footer" id="idbutton">
-                      
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> <!-- jQuery Library -->
         <script src="public\js\respond.min.js" type="text/javascript"></script> <!-- Responsive Library -->

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SUPERVISOR</title>
 
     <!-- Font Awesome -->
 <link
@@ -59,18 +59,23 @@ border-bottom-right-radius: .3rem;
         <div class="card rounded-3 text-black">
           <div class="row g-0">
             <div class="col-lg-12">
-              <div class="card-body p-md-5 mx-md-4">
-
-                <div class="text-center">
-                  <img src="..\assets\img\LogoVLV.png"
-                    style="width: 185px;" alt="logo">                  
-                </div>
+              <div class="card-body p-md-5 mx-md-4">                
 
                 <form>
-                  <p>Por favor, ingrese a su cuenta</p>
+                  <p>Por favor, registre sus nombres completos</p>
                   
                   <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nombres</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Estos caracteres se registrarán con mayúsculas.</div>
+                  </div>
+                  <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">DNI</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartiremos su DNI con nadie más.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Nunca compartiremos su DNI con nadie más.</div>
                   </div>
@@ -78,18 +83,12 @@ border-bottom-right-radius: .3rem;
                     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-
-                  <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                      in</button>
-                    <a class="text-muted" href="#!">¿Se te olvidó tu contraseña?</a>
-                  </div>
-
-                  <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">¿No tienes una cuenta?</p>
-                    <a href="./registerUser.php"><button type="button" class="btn btn-outline-danger">Crear nueva</button></a>
-                  </div>
-
+                  
+                    <div class="text-center pt-1 mb-5 pb-1">
+                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                        in</button>
+                    </div>
+                  
                 </form>
               </div>
             </div>
